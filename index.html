@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KariyerAI - Kariyer Planlama Asistanı</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">
+                    <img src="images/kariyericon.png" alt="KariyerAI Logo">
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#">Ana Sayfa</a></li>
+                    <li><a href="#about">Hakkımızda</a></li>
+                    <li><a href="#features">Özellikler</a></li>
+                    <li><a href="#contact">İletişim</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="title">
+                        <span class="kariyer-text" data-text="Kariyer">Kariyer</span>
+                        <span class="highlight" data-text="AI">AI</span>
+                    </h1>
+                    <h2 class="subtitle">Nedir?</h2>
+                    <p class="description">
+                        KariyerAI, Gençlik ve Spor Bakanlığı tarafından sunulan, öğrencilerin kariyer yolunu çizerken
+                        destek
+                        alabileceği yapay zeka destekli bir yazılımdır. Kişiselleştirilmiş öneriler ve rehberlik ile
+                        kariyer hedeflerinize ulaşın.
+                    </p>
+                    <div class="button-group">
+                        <a href="#" class="edevlet-button" onclick="goToEdevlet()">
+                            <i class="fas fa-sign-in-alt"></i>
+                            e-Devlet ile Giriş
+                        </a>
+                    </div>
+                </div>
+                <div class="image-container">
+                    <img src="images/robot.png" alt="KariyerAI Robot" class="image">
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">Hakkımızda</h2>
+                <div class="about-card">
+                    <div class="about-content">
+                        <h3>Biz Kimiz?</h3>
+                        <p>KariyerAI, Gençlik ve Spor Bakanlığı tarafından geliştirilen, gençlerin kariyer planlamasına
+                            yardımcı olmak için tasarlanmış yapay zeka destekli bir platformdur.</p>
+                        <p>Amacımız, gençlerin ilgi alanlarını, yeteneklerini ve hedeflerini analiz ederek onlara en
+                            uygun kariyer yollarını sunmak ve bu yolda ilerlemeleri için rehberlik etmektir.</p>
+                        <p>Yapay zeka teknolojimiz, kişiselleştirilmiş öneriler sunarak her gencin potansiyelini en üst
+                            düzeye çıkarmasına yardımcı olur.</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="images/kitap.jpg" alt="Kitap Yığını" class="robot-image">
+                    </div>
+                </div>
+
+                <div class="vision-mission">
+                    <div class="vision">
+                        <h3><i class="fas fa-eye"></i> Vizyonumuz</h3>
+                        <p>Türkiye'deki tüm gençlerin kariyer planlamasında ilk başvuru noktası olmak ve yapay zeka
+                            teknolojisi ile her gencin potansiyelini keşfetmesine yardımcı olmak.</p>
+                        <p>Gençlerin yeteneklerini ve ilgi alanlarını doğru şekilde yönlendirerek, ülkemizin geleceğine
+                            katkıda bulunmak ve global rekabette öne çıkmasını sağlamak.</p>
+                    </div>
+                    <div class="mission">
+                        <h3><i class="fas fa-bullseye"></i> Misyonumuz</h3>
+                        <p>Yapay zeka teknolojisini kullanarak gençlere kişiselleştirilmiş, doğru ve güncel kariyer
+                            rehberliği sunmak.</p>
+                        <p>Eğitim kurumları, işverenler ve gençler arasında köprü kurarak, iş dünyasının ihtiyaçları ile
+                            gençlerin yeteneklerini buluşturmak.</p>
+                        <p>Her gencin kendi yolunu çizmesine yardımcı olacak araçlar ve kaynaklar sağlamak.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="section">
+            <div class="container">
+                <h2 class="section-title">Özelliklerimiz</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Yapay Zeka Analizi</h3>
+                        <p>Yapay zeka algoritmalarımız ilgi alanlarınızı ve yeteneklerinizi analiz ederek size en uygun
+                            kariyer yollarını önerir.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-road"></i>
+                        </div>
+                        <h3>Kariyer Yol Haritası</h3>
+                        <p>Hedeflerinize ulaşmak için adım adım kariyer yol haritası oluşturur ve ilerlemenizi takip
+                            eder.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h3>Eğitim Önerileri</h3>
+                        <p>Kariyer hedeflerinize uygun kurs, sertifika ve eğitim programları önerileri sunar.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Mentorluk Desteği</h3>
+                        <p>Yapay zeka destekli mentorluk sistemi ile kariyer yolculuğunuzda rehberlik sağlar.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3>Staj ve İş Fırsatları</h3>
+                        <p>Profilinize uygun staj ve iş fırsatlarını keşfetmenizi sağlar ve başvuru süreçlerinde size
+                            destek olur.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Gelişim Takibi</h3>
+                        <p>Kariyer hedeflerinize doğru ilerlemenizi takip eder ve gelişim alanlarınızı belirlemenize
+                            yardımcı olur.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title">İletişim</h2>
+                <div class="contact-card">
+                    <div class="contact-info">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Örnek Mahallesi Oruç Reis Caddesi No:13 Altındağ / Ankara</span>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fas fa-phone"></i>
+                        <span>444 0 472</span>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@kariyerai.gov.tr</span>
+                    </div>
+                    <div class="contact-info">
+                        <i class="fas fa-clock"></i>
+                        <span>Pazartesi - Cuma, 09:00 - 18:00</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <img class="logo2" src="images/gsbicon.png" alt="Gençlik ve Spor Bakanlığı">
+
+            </div>
+            <div class="footer-section">
+                <h3>Site Haritası</h3>
+                <ul>
+                    <li><a href="#about">Vizyonumuz</a></li>
+                    <li><a href="#about">Misyonumuz</a></li>
+                    <li><a href="#">S.S.S.</a></li>
+                    <li><a href="#contact">İletişim</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="footer-bottom">© 2025 KariyerAI. Tüm hakları saklıdır.</p>
+    </footer>
+
+    <script>
+        function goToEdevlet() {
+            const edevletWindow = window.open("https://giris.turkiye.gov.tr/Giris/gir", "_blank");
+            setTimeout(() => {
+                edevletWindow.close(); // e-devlet sekmesini kapat
+                window.location.href = "giris.html"; // ana sayfaya yönlendir
+            }, 5000);
+        }
+
+    </script>
+</body>
+
+</html>

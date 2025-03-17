@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KariyerAI Sohbet</title>
+    <link rel="stylesheet" href="giris.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script>
+        window.GEMINI_API_KEY = 'AIzaSyDaEpCBsfJPpYLENOP81gh0lcvtaajUolY';
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+    </script>
+    <script src="chat.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Sol Sidebar -->
+        <aside class="sidebar">
+            <div class="logo-container">
+                <img src="images/kariyericon.png" alt="KariyerAI Logo" class="logo">
+            </div>
+            <button class="new-chat-button">
+                <i class="fas fa-comments"></i> Yeni Sohbet
+            </button>
+            <div class="chat-list">
+                <!-- Sohbetler buraya dinamik olarak eklenecek -->
+            </div>
+            <div class="user-icon">
+                <a href="profil.html">
+                <i class="fas fa-user"></i>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Ana İçerik Alanı -->
+        <main class="chat-container">
+            <!-- Sohbet Mesajları -->
+            <div class="chat-messages" id="chatMessages"></div>
+
+            <!-- Mesaj Giriş Alanı -->
+            <div class="message-input-container">
+                <input type="file" id="pdfInput" accept=".pdf" style="display: none;">
+                <button id="uploadPdfButton" class="attachment-button">
+                    <i class="fas fa-paperclip"></i>
+                </button>
+                <div id="pdfPreview" class="pdf-preview" style="display: none;">
+                    <div class="pdf-info">
+                        <i class="fas fa-file-pdf"></i>
+                        <span id="pdfFileName"></span>
+                    </div>
+                    <button id="removePdfButton" class="remove-pdf-button">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <input type="text" id="userInput" placeholder="Mesajınızı giriniz." class="message-input">
+                <button id="sendMessage" class="send-button">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+
+            <!-- PDF Yükleme Alanı -->
+            <div class="pdf-upload-container">
+                <input type="file" id="pdfInput" accept=".pdf" style="display: none;">
+                <button id="uploadPdfButton" class="upload-button">
+                    <i class="fas fa-file-pdf"></i> PDF Yükle
+                </button>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kariyer AI Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="profil.css">
+    <script src="profil.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo-container">
+            <a href="giris.html">
+                <img src="images/kariyericon.png" alt="KariyerAI Logo" class="logo">
+            </a>
+        </div>
+        <div class="settings-icon">
+            <a href="ayarlar.html">
+                <i class="fas fa-cog"></i>
+            </a>
+        </div>
+    </div>
+    <div class="content">
+        <div class="top-section">
+            <div class="chart">
+                <h3>Bu Ayın Verileri</h3>
+                <canvas id="chartCanvas"></canvas>
+            </div>
+            <div class="todo">
+                <h3>Yapılacaklar Listesi</h3>
+                <ul id="todoList"></ul>
+                <div class="input-container">
+                    <input type="text" id="todoInput" placeholder="Yapmak istediğinizi ekleyin...">
+                    <button onclick="addTodo()">➤</button>
+                </div>
+            </div>
+        </div>
+        <div class="watchlist">
+            <h3>İzleme Listesi</h3>
+            <div class="video-grid">
+                <div class="video-container" data-url="">
+                    <div class="video-placeholder">
+                        <button class="play-button">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <div class="video-title">Video 1</div>
+                    <div class="video-actions">
+                        <button class="add-video-btn" onclick="openModal(this)"><i class="fas fa-plus"></i></button>
+                        <button class="delete-video-btn" onclick="deleteVideo(this)"><i class="fas fa-trash"></i></button>
+                    </div>
+                </div>
+                <div class="video-container" data-url="">
+                    <div class="video-placeholder">
+                        <button class="play-button">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <div class="video-title">Video 2</div>
+                    <div class="video-actions">
+                        <button class="add-video-btn" onclick="openModal(this)"><i class="fas fa-plus"></i></button>
+                        <button class="delete-video-btn" onclick="deleteVideo(this)"><i class="fas fa-trash"></i></button>
+                    </div>
+                </div>
+                <div class="video-container" data-url="">
+                    <div class="video-placeholder">
+                        <button class="play-button">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <div class="video-title">Video 3</div>
+                    <div class="video-actions">
+                        <button class="add-video-btn" onclick="openModal(this)"><i class="fas fa-plus"></i></button>
+                        <button class="delete-video-btn" onclick="deleteVideo(this)"><i class="fas fa-trash"></i></button>
+                    </div>
+                </div>
+                <div class="video-container" data-url="">
+                    <div class="video-placeholder">
+                        <button class="play-button">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <div class="video-title">Video 4</div>
+                    <div class="video-actions">
+                        <button class="add-video-btn" onclick="openModal(this)"><i class="fas fa-plus"></i></button>
+                        <button class="delete-video-btn" onclick="deleteVideo(this)"><i class="fas fa-trash"></i></button>
+                    </div>
+                </div>
+                <div class="video-container" data-url="">
+                    <div class="video-placeholder">
+                        <button class="play-button">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <div class="video-title">Video 5</div>
+                    <div class="video-actions">
+                        <button class="add-video-btn" onclick="openModal(this)"><i class="fas fa-plus"></i></button>
+                        <button class="delete-video-btn" onclick="deleteVideo(this)"><i class="fas fa-trash"></i></button>
+                    </div>
+                </div>
+                <div class="video-container" data-url="">
+                    <div class="video-placeholder">
+                        <button class="play-button">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
+                    <div class="video-title">Video 6</div>
+                    <div class="video-actions">
+                        <button class="add-video-btn" onclick="openModal(this)"><i class="fas fa-plus"></i></button>
+                        <button class="delete-video-btn" onclick="deleteVideo(this)"><i class="fas fa-trash"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Ekleme Modal -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Video Ekle</h2>
+            <input type="text" id="videoTitle" placeholder="Video Başlığı">
+            <input type="text" id="videoUrl" placeholder="Video Linki">
+            <button onclick="saveVideo()">Kaydet</button>
+        </div>
+    </div>
+</body>
+</html> 

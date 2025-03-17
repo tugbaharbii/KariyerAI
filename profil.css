@@ -1,0 +1,325 @@
+body {
+    display: flex;
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+}
+.sidebar {
+    width: 250px;
+    background-color: #cfe2ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    justify-content: space-between;
+    height: 200vh;
+}
+.logo {
+    width: 300px;
+    margin-bottom: 0px;
+}
+.user-icon {
+    justify-content: left-start;
+    margin-top: auto;
+    padding-bottom: 25px;
+    font-size: 40px;    
+}
+.user-icon i {
+    font-size: 24px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 50%;
+    color: #0044cc;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+.user-icon i:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+.settings-icon {
+    position: fixed;
+    bottom: 25px;
+    left: 25px;
+    font-size: 40px;    
+}
+.settings-icon i {
+    font-size: 24px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 50%;
+    color: #0044cc;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+.settings-icon i:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+.content {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+.top-section {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.chart {
+    width: 50%;
+    background-color: #fffbeb;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.todo {
+    width: 45%;
+    background-color: #fffbeb;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 400px;
+}
+.todo .input-container {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+}
+.todo input {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.todo button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #ff4d4d;
+    color: white;
+    border: 2px solid black;
+    transition: all 0.3s;
+}
+.todo button:hover, .watchlist button:hover {
+    background-color: #d43f3f;
+    border-color: #333;
+}
+.watchlist {
+    width: 95%;
+    background-color: #fffbeb;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+.video-container {
+    position: relative;
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.video-placeholder {
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 en-boy oranı */
+    background-color: #f0f0f0;
+    position: relative;
+}
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    transition: all 0.3s;
+}
+.play-button:hover {
+    background-color: #d43f3f;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+.video-title {
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+    cursor: text;
+    transition: background-color 0.3s;
+}
+
+.video-title:hover {
+    background-color: #f8f8f8;
+}
+
+.video-title:focus {
+    background-color: #fff;
+    outline: 1px solid #ddd;
+    outline-offset: -1px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    margin-bottom: 70px;
+}
+li {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    margin: 5px 0;
+    padding: px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: calc(100% - 22px); /* padding'i hesaba katarak */
+}
+li input[type="checkbox"] {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+li span.todo-text {
+    flex-grow: 1;
+    margin-left: 5px;
+    text-align: left;
+}
+.delete-btn {
+    margin-left: auto;
+    background: none;
+    border: none;
+    color: #ff4d4d;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+.delete-btn:hover {
+    color: #d43f3f;
+    transform: scale(1.1);
+}
+.video-actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    gap: 10px;
+}
+
+.add-video-btn, .delete-video-btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.add-video-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.delete-video-btn {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+.add-video-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.1);
+}
+
+.delete-video-btn:hover {
+    background-color: #d43f3f;
+    transform: scale(1.1);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: black;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.modal-content button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.modal-content button:hover {
+    background-color: #45a049;
+}
